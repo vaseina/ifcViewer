@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="ifc-viewer.css" />
+  <link rel="icon" href="./logo/favicon.png">
+  <title>IFCViewer</title>
+</head>
+<body>
+  
+  <header>
+    <a class="button" href="./index.html"><img class="logo" src="./logo/sia_architecte_logo_white.png" alt="" /></a>
+    <div class="menu-container">
+      <h3><a class="button" href="./ifc-viewer.html">IFCViewer<span id="super"> NEW</span></a></h3>
+      <h3>Why</h3>
+      <h3>Who</h3>
+      <h3>How</h3>
+      <h3>What</h3>
+      <h3>Contacts</h3>
+    </div>
+  </header>
+
+  <div class="toolbar">
+  <div class="container">
+    <button id="back-button" class="icon-button">
+      <svg clip-rule="evenodd" fill-rule="evenodd" width="20" height="20" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m10.978 14.999v3.251c0 .412-.335.75-.752.75-.188 0-.375-.071-.518-.206-1.775-1.685-4.945-4.692-6.396-6.069-.2-.189-.312-.452-.312-.725 0-.274.112-.536.312-.725 1.451-1.377 4.621-4.385 6.396-6.068.143-.136.33-.207.518-.207.417 0 .752.337.752.75v3.251h9.02c.531 0 1.002.47 1.002 1v3.998c0 .53-.471 1-1.002 1zm-1.5-7.506-4.751 4.507 4.751 4.507v-3.008h10.022v-2.998h-10.022z" fill-rule="nonzero"/></svg>
+      <div class="text-button">Back</div>
+    </button>
+    <button id="select-button" class="icon-button">
+      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"><path d="M18.764 17.385l2.66 5.423-2.441 1.192-2.675-5.474-3.308 2.863v-12.389l10 7.675-4.236.71zm2.236-7.385h2v-4h-2v4zm0 2.619l2 1.535v-2.154h-2v.619zm-10 8.77v-1.389h-4v2h4v-.611zm-8-3.389h-2v4h4v-2h-2v-2zm-2-14h2v-2h2v-2h-4v4zm2 8h-2v4h2v-4zm8-12h-4v2h4v-2zm6 0h-4v2h4v-2zm4 4h2v-4h-4v2h2v2zm-18 2h-2v4h2v-4z"/></svg>
+      <div class="text-button">Select</div>
+    </button>
+    <button id="measure-button" class="icon-button">
+      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"><path d="M24 0h-8v24h8v-24zm-6 22v-2h2v-1h-2v-2h3v-1h-3v-2h2v-1h-2v-2h2v-1h-2v-2h3v-1h-3v-2h2v-1h-2v-2h4v20h-4zm-10-14v8h4l-6 8-6-8h4v-8h-4l6-8 6 8h-4z"/></svg>
+      <div class="text-button">Measure</div>
+    </button>
+    <button id="hide-button" class="icon-button">
+      <svg clip-rule="evenodd" fill-rule="evenodd" width="20" height="20" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m17.069 6.546 2.684-2.359c.143-.125.32-.187.497-.187.418 0 .75.34.75.75 0 .207-.086.414-.254.562l-16.5 14.501c-.142.126-.319.187-.496.187-.415 0-.75-.334-.75-.75 0-.207.086-.414.253-.562l2.438-2.143c-1.414-1.132-2.627-2.552-3.547-4.028-.096-.159-.144-.338-.144-.517s.049-.358.145-.517c2.111-3.39 5.775-6.483 9.853-6.483 1.815 0 3.536.593 5.071 1.546zm2.319 1.83c.966.943 1.803 2.014 2.474 3.117.092.156.138.332.138.507s-.046.351-.138.507c-2.068 3.403-5.721 6.493-9.864 6.493-1.297 0-2.553-.313-3.729-.849l1.247-1.096c.795.285 1.626.445 2.482.445 3.516 0 6.576-2.622 8.413-5.5-.595-.932-1.318-1.838-2.145-2.637zm-3.434 3.019c.03.197.046.399.046.605 0 2.208-1.792 4-4 4-.384 0-.756-.054-1.107-.156l1.58-1.389c.895-.171 1.621-.821 1.901-1.671zm-.058-3.818c-1.197-.67-2.512-1.077-3.898-1.077-3.465 0-6.533 2.632-8.404 5.5.853 1.308 1.955 2.567 3.231 3.549l1.728-1.519c-.351-.595-.553-1.289-.553-2.03 0-2.208 1.792-4 4-4 .925 0 1.777.315 2.455.843zm-2.6 2.285c-.378-.23-.822-.362-1.296-.362-1.38 0-2.5 1.12-2.5 2.5 0 .36.076.701.213 1.011z" fill-rule="nonzero"/></svg>
+      <div class="text-button">Hide items</div>
+    </button>
+    <button id="cut-button" class="icon-button">
+      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"><path d="M2 17h-2v-4h2v4zm3 7v-2h-3v-3h-2v5h5zm6-2h-4v2h4v-2zm-11-11h2v-3h3v-2h-5v5zm24 .044c0 1.64-1.352 2.956-3.146 2.956-.533 0-1.083-.119-1.605-.373-1.511-.731-2.296-2.333-1.943-3.774.203-.822-.23-.934-.891-1.253l-11.036-5.341s1.322-1.812 2.76-1.117c.881.427 4.424 2.136 7.477 3.617l.766-.368c.662-.319 1.094-.43.895-1.252-.351-1.442.439-3.043 1.952-3.77.52-.251 1.067-.369 1.595-.369 1.799 0 3.147 1.32 3.147 2.956 0 1.23-.766 2.454-2.032 3.091-1.266.634-2.15.14-3.406.75l-.394.19.431.21c1.254.614 2.142.122 3.404.759 1.262.638 2.026 1.861 2.026 3.088zm-5.133-7.011c.381.795 1.459 1.072 2.406.617.945-.455 1.405-1.472 1.027-2.267-.381-.796-1.46-1.073-2.406-.618-.946.455-1.408 1.472-1.027 2.268zm-2.834 2.819c0-.322-.261-.583-.583-.583-.321 0-.583.261-.583.583s.262.583.583.583c.322.001.583-.261.583-.583zm5.272 2.499c-.945-.457-2.025-.183-2.408.611-.381.795.078 1.814 1.022 2.271.945.458 2.024.184 2.406-.611.382-.795-.075-1.814-1.02-2.271zm-6.305 12.649h-2v2h4v-5h-2v3zm.861-9h-.861v4h2v-2.51c-.471-.432-.847-.942-1.139-1.49zm-10.528-2.297s1.317 1.815 2.755 1.124l6.598-3.181-2.539-1.229-6.814 3.286z"/></svg>
+      <div class="text-button">Cut</div>
+    </button>
+    <button id="floorplans-button" class="icon-button">
+      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd"><path d="M24 23h-20c-2.208 0-4-1.792-4-4v-15.694c.313-1.071 1.285-2.306 3-2.306 1.855 0 2.769 1.342 2.995 2.312l.005 1.688h18v18zm-2-16h-16v11s-.587-1-1.922-1c-1.104 0-2.078.896-2.078 2s.896 2 2 2h18v-14zm-2 12h-12v-10h12v10zm-8-9h-3v8h10v-8h-6v3h6v1h-2v3h-1v-3h-3v3h-1v-7z"/></svg>
+      <div class="text-button">Floor plans</div>
+    </button>
+    <button id="map-button" class="icon-button">
+      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm1 16.057v-3.057h2.994c-.059 1.143-.212 2.24-.456 3.279-.823-.12-1.674-.188-2.538-.222zm1.957 2.162c-.499 1.33-1.159 2.497-1.957 3.456v-3.62c.666.028 1.319.081 1.957.164zm-1.957-7.219v-3.015c.868-.034 1.721-.103 2.548-.224.238 1.027.389 2.111.446 3.239h-2.994zm0-5.014v-3.661c.806.969 1.471 2.15 1.971 3.496-.642.084-1.3.137-1.971.165zm2.703-3.267c1.237.496 2.354 1.228 3.29 2.146-.642.234-1.311.442-2.019.607-.344-.992-.775-1.91-1.271-2.753zm-7.241 13.56c-.244-1.039-.398-2.136-.456-3.279h2.994v3.057c-.865.034-1.714.102-2.538.222zm2.538 1.776v3.62c-.798-.959-1.458-2.126-1.957-3.456.638-.083 1.291-.136 1.957-.164zm-2.994-7.055c.057-1.128.207-2.212.446-3.239.827.121 1.68.19 2.548.224v3.015h-2.994zm1.024-5.179c.5-1.346 1.165-2.527 1.97-3.496v3.661c-.671-.028-1.329-.081-1.97-.165zm-2.005-.35c-.708-.165-1.377-.373-2.018-.607.937-.918 2.053-1.65 3.29-2.146-.496.844-.927 1.762-1.272 2.753zm-.549 1.918c-.264 1.151-.434 2.36-.492 3.611h-3.933c.165-1.658.739-3.197 1.617-4.518.88.361 1.816.67 2.808.907zm.009 9.262c-.988.236-1.92.542-2.797.9-.89-1.328-1.471-2.879-1.637-4.551h3.934c.058 1.265.231 2.488.5 3.651zm.553 1.917c.342.976.768 1.881 1.257 2.712-1.223-.49-2.326-1.211-3.256-2.115.636-.229 1.299-.435 1.999-.597zm9.924 0c.7.163 1.362.367 1.999.597-.931.903-2.034 1.625-3.257 2.116.489-.832.915-1.737 1.258-2.713zm.553-1.917c.27-1.163.442-2.386.501-3.651h3.934c-.167 1.672-.748 3.223-1.638 4.551-.877-.358-1.81-.664-2.797-.9zm.501-5.651c-.058-1.251-.229-2.46-.492-3.611.992-.237 1.929-.546 2.809-.907.877 1.321 1.451 2.86 1.616 4.518h-3.933z"/></svg>
+      <div class="text-button">Map</div>
+    </button>
+  </div>
+  </div>
+
+  <div class="all-menus">
+
+    <div class="ifc-tree-menu">
+      <ul id="myUL">
+          <li id="tree-root">
+              <span class="caret">Tree</span>
+              <ul class="nested">
+                  <li>0</li>
+                  <li>
+                      <span class="caret">1</span>
+                      <ul class="nested">
+                          <li>1.1</li>
+                          <li>1.2</li>
+                          <li><span class="caret">1.3</span>
+                              <ul class="nested">
+                                  <li>1.3.1</li>
+                                  <li>1.3.2</li>
+                                  <li>1.3.3</li>
+                              </ul>
+                          </li>
+                      </ul>
+                  </li>
+              </ul>
+          </li>
+      </ul>
+  </div>
+
+  <div class="ifc-property-menu" id="ifc-property-menu">
+    <div class="ifc-property-item">
+      <div>Properties</div>
+      <div class="ifc-property-value"></div>
+    </div>
+    <div id="ifc-property-menu-root"></div>
+  </div>
+
+  <div class="checkboxes" id="checkboxes">
+    <div>
+      <input type="checkbox" checked="true" id="IFCWALL"/>
+      IFCWALL
+    </div>
+    <div>
+      <input type="checkbox" checked="true" id="IFCWALLSTANDARDCASE"/>
+      IFCWALLSTANDARDCASE
+    </div>
+    <div>
+      <input type="checkbox" checked="true" id="IFCSLAB"/>
+      IFCSLAB
+    </div>
+    <div>
+      <input type="checkbox" checked="true" id="IFCDOOR"/>
+      IFCDOOR
+    </div>
+    <div>
+      <input type="checkbox" checked="true" id="IFCWINDOW"/>
+      IFCWINDOW
+    </div>
+    <div>
+      <input type="checkbox" checked="true" id="IFCFURNISHINGELEMENT"/>
+      IFCFURNISHINGELEMENT
+    </div>
+    <div>
+      <input type="checkbox" checked="true" id="IFCMEMBER"/>
+      IFCMEMBER
+    </div>
+    <div>
+      <input type="checkbox" checked="true" id="IFCPLATE"/>
+      IFCPLATE
+    </div>
+    <div>
+      <input type="checkbox" checked="true" id="IFCCURTAINWALL"/>
+      IFCCURTAINWALL
+    </div>
+    <div>
+      <input type="checkbox" checked="true" id="IFCCOLUMN"/>
+      IFCCOLUMN
+    </div>
+    <div>
+      <input type="checkbox" checked="true" id="IFCROOF"/>
+      IFCROOF
+    </div>
+    <div>
+      <input type="checkbox" checked="true" id="IFCBUILDINGELEMENTPROXY"/>
+      IFCBUILDINGELEMENTPROXY
+    </div>
+  </div>
+
+  <div class="button-container" id="button-container"></div>
+  </div>
+
+  <div id="viewer-container"></div>
+
+  <script src="./dist/bundle.js"></script>
+
+</body>
+</html>

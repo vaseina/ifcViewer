@@ -1,0 +1,165 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --main-color: #f08923;
+    --second-color: #7a7a7a;
+    --background-color: #ffffff;
+    --text-color: #ffffff;
+    --text-color-2: #54595F;
+    --text-color-3: black;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: 'Helvetica', sans-serif;
+}
+
+html,
+body {
+    overflow: hidden;
+}
+
+header {
+    color: var(--background-color);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.menu-container {
+    display: flex;
+    align-items: center;
+}
+
+.menu-container:last-child {
+    margin-left: auto;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--text-color-3);
+    margin: 1rem;
+}
+
+h3:hover {
+    text-decoration: underline;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    text-underline-offset: .7rem;
+}
+
+.button {
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--text-color-3);
+    font-family: 'Helvetica', sans-serif;
+    text-decoration: none;
+}
+
+#super{  
+    vertical-align: super;  
+    font-size: .5rem;
+    color: var(--main-color);
+    font-weight: 600;
+    letter-spacing: 0.03rem;
+}  
+
+h1 {
+    margin: 0rem 0rem 1rem 0rem;
+    text-align: center;
+}
+
+.logo {
+    height: 2rem;
+    margin: 0 1rem;
+}
+
+#project-list {
+    height: 70vh;
+    background: transparent;
+    display: flex;
+}
+
+#project-list .card {
+    height: 100%;
+    flex: 1;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all .5s;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: brightness(80%);
+}
+
+#project-list .card:hover {
+    flex: 3;
+    filter: brightness(60%);
+}
+
+#project-list .card a {
+    width: 100%;
+    height: 100%;
+}
+
+#project-list .card a:hover {
+    transition: all .5s ease-in-out;
+    opacity: 1;
+}
+
+.img-1 {
+    background-image: url(https://www.sia-arch.eu/wp-content/uploads/2020/10/dudelange_001.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.img-2 {
+    background-image: url(https://www.sia-arch.eu/wp-content/uploads/2020/10/thedomes_007.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.img-3 {
+    background-image: url(https://www.sia-arch.eu/wp-content/uploads/2020/10/bastogne_warmuseum_001.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.img-4 {
+    background-image: url(https://www.sia-arch.eu/wp-content/uploads/2020/10/merl_02.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.img-5 {
+    background-image: url(https://www.sia-arch.eu/wp-content/uploads/2020/10/tabledemaxime_001.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.img-6 {
+    background-image: url(https://www.sia-arch.eu/wp-content/uploads/2022/04/2-scaled.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.img-7 {
+    background-image: url(https://www.sia-arch.eu/wp-content/uploads/2022/05/Jambes-0097-Au-Fil-de-lEau-3D-005-scaled.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+@media (max-width: 800px) {
+    h3 {
+        display: none;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
